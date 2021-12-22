@@ -1,4 +1,4 @@
-<div class='container center'>
+<div class='containers center'>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= render partial: 'shared/header', :locals => { :title => "LOGIN", :back_url => root_path, :back_button => true,  :form_id => 'new_user', :action_button => 'Log In'  } %>
   <p class="notice"><%= notice %></p>
