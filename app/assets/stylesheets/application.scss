@@ -14,7 +14,6 @@
  *= require_self
  */
  @import "bootstrap";
- 
  @font-face {
   font-family: 'Proxima Nova Font';
   src: url('Proxima Nova Font.otf');
@@ -35,10 +34,6 @@
 a {
   text-decoration: none;
   color: #8d8c8c;
-}
-
-.link {
-  margin: 1rem auto;
 }
 
 .container {

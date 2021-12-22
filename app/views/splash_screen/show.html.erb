@@ -1,5 +1,9 @@
-<div class="container">
-<h1>You<span>Spent</h1>
-<%= button_to 'LOG IN', new_user_session_path, class: "btn" %>
-<%= button_to 'SIGN UP', new_user_registration_path, method: :get, class: "btn" %>
+<div class='container flex-column'>
+  <div class="logo">
+    <h1>You<span>Spent</h1>
+  </div>
+  <div class='buttons flex-column'>
+    <%= button_to 'LOG IN', new_user_session_path, class:"login" %>
+    <%= button_to 'SIGN UP', new_user_registration_path, method: :get, class:"link logout" %>
+  </div>
 </div>

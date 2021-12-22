@@ -4,6 +4,8 @@
     <span class='bold'>Total amount:</span>
     <span class='bold'>$<%= '%.2f' % @total %></span>
   </div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
  
 <ul class='list flex-column'>
   <% @groups.each do |group|%>

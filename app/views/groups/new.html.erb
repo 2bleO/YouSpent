@@ -1,20 +1,14 @@
 <div>
-    <a href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-    <div id = "margin">
-      <p id= "no-padding">NEW CATEGORY</p>
-    </div>
-</div>
-<div>
     <div>
         <%= form_with url: user_groups_path, model: @group do |f| %>
+        <%= render partial: 'shared/header', :locals => { :title => "NEW CATEGORY", :back_url => user_groups_path, :back_button => true,  :form_id => 'category_form', :action_button =>'Save'  } %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <% @group.errors.full_messages_for(:name).each do |m| %>
         <%= m %>
         <% end %>
         <%= f.text_field :name, class: 'login-field',id: "groupname", placeholder: "Group Name", required: true %>
         <%= f.text_field :icon, class: 'login-field mt-0', placeholder: "Icon URL" %>
-        <div>
-            <%= f.submit "Create", class: "green-button" %>
-        </div>
         <% end %>
 
 
