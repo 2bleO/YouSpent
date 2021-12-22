@@ -3,7 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
+gem 'bootstrap', '~> 5.0.2'
+gem 'cancancan'
 gem 'devise'
+gem 'jquery-rails'
+gem 'rspec-rails', '~> 5.0.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -52,6 +56,7 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'
 end
 
