@@ -4,7 +4,7 @@
 ![screenshot](screenshot.png)
 
 ## Live Demo
-![Click Here](https://floating-refuge-10181.herokuapp.com)
+[Click Here](https://floating-refuge-10181.herokuapp.com)
 
 # YouSpent
 
