@@ -3,7 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Groups', type: :feature do
   include Devise::Test::IntegrationHelpers
   let(:user) { User.create(name: 'TestUser1', email: 'Test@user1.com', password: 'password') }
-  let(:group) { Group.create(name: 'Fast Food', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/640px-McDonald%27s_Golden_Arches.svg.png', user: user) }
+  let(:group) do
+    Group.create(name: 'Fast Food',
+                 icon: 'https://Golden_Arches.svg.png', user: user)
+  end
   let(:entity) { Entity.create(name: 'bicmac', amount: 10, group_ids: group.id) }
 
   describe '#show page' do
@@ -24,9 +27,9 @@ RSpec.describe 'Groups', type: :feature do
       expect(page).to have_link('ADD TRANSACTION')
     end
 
-      it 'should redirect me to page for adding a new transaction' do
-        click_link 'ADD TRANSACTION'
-        expect(current_path).to eq(new_user_group_entity_path(user, group.id))
-      end
-   end
+    it 'should redirect me to page for adding a new transaction' do
+      click_link 'ADD TRANSACTION'
+      expect(current_path).to eq(new_user_group_entity_path(user, group.id))
+    end
+  end
 end

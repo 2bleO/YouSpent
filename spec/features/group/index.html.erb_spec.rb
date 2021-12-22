@@ -6,7 +6,8 @@ RSpec.describe 'Group view', type: :feature do
 
   describe '#index' do
     before do
-      Group.create(name: 'Fast Food', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/640px-McDonald%27s_Golden_Arches.svg.png', user: user)
+      Group.create(name: 'Fast Food',
+                   icon: 'https://Golden_Arches.svg.png', user: user)
       sign_in user
       visit user_groups_path(user)
     end
